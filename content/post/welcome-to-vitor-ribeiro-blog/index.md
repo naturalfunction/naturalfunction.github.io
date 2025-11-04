@@ -1,12 +1,12 @@
 ---
-title: "Welcome to Natural Function"
+title: "Welcome to Vitor Ribeio's Blog"
 date: 2025-11-03T21:45:00-06:00
 description: "Welcome to my new Hugo blog powered by the Stack theme"
-categories: ["General"]
-tags: ["welcome", "hugo", "blog"]
+categories: ["Welcome"]
+tags: ["welcome"]
 ---
 
-# Welcome to Natural Function!
+# Welcome to Vitor Ribeiro's blog!
 
 This is my new blog built with Hugo and the Stack theme, automatically deployed to GitHub Pages.
 
