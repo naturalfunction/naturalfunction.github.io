@@ -1,5 +1,5 @@
 ---
-title: "Welcome to Vitor Ribeio's Blog"
+title: "Welcome to Vitor Ribeiro's Blog"
 date: 2025-11-03T21:45:00-06:00
 description: "Welcome to my new Hugo blog powered by the Stack theme"
 categories: ["Welcome"]
