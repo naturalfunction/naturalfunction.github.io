@@ -1,20 +1,19 @@
 ---
 title: "Welcome to Vitor Ribeiro's Blog"
 date: 2025-11-03T21:45:00-06:00
-description: "Welcome to my new Hugo blog powered by the Stack theme"
+description: ""
 categories: ["Welcome"]
 tags: ["welcome"]
+image: "VR-background.png"  # Add your featured image filename here
 ---
 
-# Welcome to Vitor Ribeiro's blog!
-
-This is my new blog built with Hugo and the Stack theme, automatically deployed to GitHub Pages.
+Welcome to my new [Hugo](https://gohugo.io/)  blog powered by the [Stack](https://stack.jimmycai.com/) theme.
 
 ## What's Next?
 
 I can now:
-- Write posts in Markdown
-- Push to GitHub for automatic deployment  
+- Write posts in [Markdown](https://www.markdownguide.org/)
+- Push to [GitHub](https://github.com/) for automatic deployment  
 - Customize the theme as needed
 - Add new content easily
 
