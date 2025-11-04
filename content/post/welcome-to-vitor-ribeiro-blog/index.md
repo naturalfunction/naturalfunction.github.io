@@ -1,6 +1,6 @@
 ---
 title: "Welcome to Vitor Ribeiro's Blog"
-date: 2025-11-03T21:45:00-06:00
+date: 2025-11-04
 description: ""
 categories: ["Welcome"]
 tags: ["welcome"]
