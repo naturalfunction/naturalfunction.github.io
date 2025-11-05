@@ -1,0 +1,11 @@
+<!-- Custom CSS -->
+{{ $customCSS := resources.Get "scss/custom.scss" | css.Sass | resources.Minify }}
+<link rel="stylesheet" href="{{ $customCSS.RelPermalink }}">
+
+<!-- Meta tags for better SEO -->
+<meta name="theme-color" content="#2d3748">
+<meta name="msapplication-TileColor" content="#2d3748">
+
+<!-- Performance optimizations -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
