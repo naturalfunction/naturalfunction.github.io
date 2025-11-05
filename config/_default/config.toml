@@ -1,5 +1,5 @@
 # Change baseurl before deploy
-baseurl = "https://naturalfunction.github.io"
+baseurl = "vitorribeiro.com"
 languageCode = "en-us"
 title = "Vitor Ribeiro"
 
