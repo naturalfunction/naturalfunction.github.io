@@ -1,7 +1,7 @@
 ---
 title: "Getting started with KORE ConnectivityPRO™ API"
 date: 2025-11-05
-description: "This article covers the basics to start using the Kore Wireless ConnectivityPRO™ API, I hope this guide helps you onboard the API faster!"
+description: "This article covers the basics to start using the KORE Wireless ConnectivityPRO™ API, I hope this guide helps you onboard the API faster!"
 categories: ["KORE", "ConnectivityPRO™", "API"]
 tags: ["KORE", "ConnectivityPRO™", "API", "Connectivity", "How to", "Getting Started"]
 image: "KORE-LOGO-CONNECTIVITYPRO.jpeg" 
@@ -11,7 +11,7 @@ image: "KORE-LOGO-CONNECTIVITYPRO.jpeg"
 
 ## Introduction
 
-Hi there, my name is **Vitor Ribeiro**, and I am a **Solutions Architect** at [**Kore Wireless**](http://korewireless.com).  
+Hi there, my name is **Vitor Ribeiro**, and I am a **Solutions Architect** at [**KORE Wireless**](http://korewireless.com).  
 Part of my job includes onboarding customers on our [**Developer Portal**](http://developer-app.korewireless.com) for our [**Connectivity API**](https://developer-app.korewireless.com/api?product=Connectivity).  
 
 This article covers some of the frequently asked questions related to our Connectivity API and how to get started.
@@ -21,10 +21,10 @@ This article covers some of the frequently asked questions related to our Connec
 
 ## Prerequisites
 
-You can view the [**Developer Portal API documentation**](http://developer-app.korewireless.com), but to view and manage your API keys, you must be contracted for **Kore Wireless ConnectivityPro™**.  
+You can view the [**Developer Portal API documentation**](http://developer-app.korewireless.com), but to view and manage your API keys, you must be contracted for **KORE Wireless ConnectivityPro™**.  
 Otherwise, you won’t be able to see the **Authentication endpoint** described below.
 
-If you are **not** a Kore Wireless customer and are interested in our services, [contact us here](https://www.korewireless.com/contact-us/).
+If you are **not** a KORE Wireless customer and are interested in our services, [contact us here](https://www.korewireless.com/contact-us/).
 
 You don’t need to be a software developer but should be familiar with what a **REST API** is.  
 AWS has [this article](https://aws.amazon.com/what-is/restful-api/) on REST APIs that can help.  
@@ -36,28 +36,28 @@ You can watch their [101 videos](https://www.youtube.com/watch?v=hISzpFJ5fPs) or
 
 ## Overview
 
-The [**Developer Portal**](http://developer-app.korewireless.com) is a public web page for customers, partners, and builders to integrate and leverage **Kore Wireless Services** through APIs.
+The [**Developer Portal**](http://developer-app.korewireless.com) is a public web page for customers, partners, and builders to integrate and leverage **KORE Wireless Services** through APIs.
 
-It enables Kore Wireless to manage all APIs from a single point — referred to as **KORE One™**.
+It enables KORE Wireless to manage all APIs from a single point — referred to as **KORE One™**.
 
 ### Available APIs
 
 | API | Description |
 |------|-------------|
 | **Connectivity** | For ConnectivityPro™; manage SIM subscriptions. |
-| **Streaming** | For ConnectivityPro™; manage SIM subscriptions. |
+| **Streaming** | For ConnectivityPro™; KORE’s streaming engine provides developers real time data streams which can be delivered to your infrastructure so you can build solutions with data. |
 
 This article focuses on the [**Connectivity API**](https://developer-app.korewireless.com/api?product=Connectivity), which allows you to manage SIM subscriptions via API.
 
 ---
 
-## Why Use Kore’s API?
+## Why Use KORE's API?
 
 If you are using carriers like [**Verizon**](https://thingspace.verizon.com/documentation/apis/connectivity-management/api-reference.html) or [**AT&T**](https://developer.cisco.com/docs/control-center/cisco-iot-control-center-overview/), your team would need to integrate multiple APIs — each with its own endpoints and structures.  
 
 ![](mnos-apis.png) 
 
-With **Kore Wireless**, you write code against **one unified API endpoint**.  
+With **KORE Wireless**, you write code against **one unified API endpoint**.  
 From that point forward, all service types available under your contract become accessible.
 
 ![](kore-one-api.png) 
@@ -123,7 +123,7 @@ The authentication Token is valid for 10 hours, after 10 hours, you will need to
 
 ### Getting the account-id 
 
-Most endpoints from the Connectivity API will require the **“account-id”** as part of the required fields; obtaining your **“account-id”** is essential to interface with Kore’s Connectivity API.
+Most endpoints from the Connectivity API will require the **“account-id”** as part of the required fields; obtaining your **“account-id”** is essential to interface with KORE’s Connectivity API.
 
 Using Postman, setup a GET request to https://api.korewireless.com/connectivity/v1/accounts?email=<YOUR_EMAIL> 
 
@@ -233,14 +233,14 @@ If you have any questions, don’t hesitate to reach out to me [here](mailto:vri
 
 ### Postman Collection
 
-Kore offers a Postman collection that enables you to validate the APIs without writing any code, alternatively, the Developer Portal documentation also includes the ability to call the endpoints, you must be logged into the Developer Portal to view this [Auth Section](https://developer-app.korewireless.com/api?product=Connectivity#auth).
+KORE offers a Postman collection that enables you to validate the APIs without writing any code, alternatively, the Developer Portal documentation also includes the ability to call the endpoints, you must be logged into the Developer Portal to view this [Auth Section](https://developer-app.korewireless.com/api?product=Connectivity#auth).
 
 ![](devportal-postman.png) 
 
 ---
 ### Github
 
-Kore Wireless has a [GitHub repository](https://github.com/korewireless) containing code samples. You can view code samples related to the Connectivity API [here](https://github.com/korewireless/Developer-API).
+KORE Wireless has a [GitHub repository](https://github.com/korewireless) containing code samples. You can view code samples related to the Connectivity API [here](https://github.com/korewireless/Developer-API).
 
 ![](kore-github.png) 
 
