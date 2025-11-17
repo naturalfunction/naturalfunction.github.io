@@ -20,3 +20,17 @@ name = "LinkedIn"
 url = "https://www.linkedin.com/in/vitorribeiro1"
 [social.params]
 icon = "brand-linkedin"
+
+[[social]]
+identifier = "substack"
+name = "Substack"
+url = "https://vitorr.substack.com/"
+[social.params]
+icon = "brand-substack"
+
+[[social]]
+identifier = "email"
+name = "Email"
+url = "mailto:blog@vitorribeiro.com"
+[social.params]
+icon = "mail"

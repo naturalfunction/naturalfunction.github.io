@@ -1,3 +1,51 @@
 /*
     You can add your own custom styles here.
 */
+
+/* Center all sidebar content */
+.site-meta {
+    text-align: center !important;
+}
+
+.site-avatar {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+}
+
+.site-name {
+    text-align: center !important;
+}
+
+.site-description {
+    text-align: center !important;
+}
+
+/* Center social icons */
+.menu-social {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+}
+
+/* Center menu items */
+.menu {
+    text-align: center !important;
+}
+
+.menu li {
+    text-align: center !important;
+}
+
+.menu li a {
+    display: inline-flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+}
+
+.menu li a svg {
+    width: 24px !important;
+    min-width: 24px !important;
+    text-align: center !important;
+}
