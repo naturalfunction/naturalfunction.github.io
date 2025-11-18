@@ -1,6 +1,6 @@
 ---
 title: "Getting started with KORE ConnectivityPRO™ SMS API"
-date: 2025-11-17
+date: 2025-11-18
 description: "This article covers the basics to start using the Kore Wireless SMS API, I hope this guide helps you onboard the API faster!"
 categories: ["KORE", "ConnectivityPRO™", "API"]
 tags: ["KORE", "ConnectivityPRO™", "API", "Connectivity", "How to", "Getting Started","SMS"]

@@ -1,6 +1,6 @@
 ---
 title: "Make your avatar with Notion Faces"
-date: 2025-11-18
+date: 2025-11-17
 description: ""
 categories: ["Fun"]
 tags: ["Notion Faces"]
