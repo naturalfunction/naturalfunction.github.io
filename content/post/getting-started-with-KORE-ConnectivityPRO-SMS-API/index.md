@@ -13,7 +13,7 @@ image: "KORE-LOGO-CONNECTIVITYPRO.jpeg"
 
 Hi there, my name is **Vitor Ribeiro**, and I am a **Solutions Architect** at [**KORE Wireless**](http://korewireless.com). 
 
-Part of my job includes onboarding customers on our [**Developer Portal**](http://developer-app.korewireless.com) for our Kore ONE API ecosystem, that also includes the SMS API. This article covers frequently asked questions about our [**SMS API**](https://developer.korewireless.com/api?product=SMS#overview) and how to get started.
+Part of my job includes onboarding customers on our [**Developer Portal**](http://developer-app.korewireless.com) for our Kore ONE API ecosystem, that also includes the SMS API. This article covers frequently asked questions about our [**SMS API**](https://developer-app.korewireless.com/api?product=SMS#overview) and how to get started.
 
 
 ---
@@ -25,7 +25,7 @@ Otherwise, you won’t be able to see the **Authentication endpoint** described 
 
 If you are **not** a KORE Wireless customer and are interested in our services, [contact us here](https://www.korewireless.com/contact-us/).
 
-You don’t need to be a software developer but should be familiar with what a **REST API** is.  
+You don’t need to be a software developer but should be familiar with what a **REST API**.  
 AWS has [this article](https://aws.amazon.com/what-is/restful-api/) on REST APIs that can help.  
 
 For API calls, this article uses **Postman**.  
@@ -64,7 +64,7 @@ Once you have access to the Developer Portal:
 ---
 ### Getting an Authentication Token
 
-Source: [Developer Portal – Getting Started](https://developer.korewireless.com/getting-started?id=2.1.1.3)
+Source: [Developer Portal – Getting Started](https://developer-app.korewireless.com/getting-started?id=2.1.1.3)
 
 KORE uses the **OAuth 2.0 Client Credentials Workflow**.
 
@@ -205,7 +205,7 @@ After sending the GET request, you should receive a JSON response containing all
 </code>
 </pre>
 
-You can also obtain the MSISDN value using our ConnectivityPro web app using the Subscription details page https://connect.korewireless.com/subscriptions/8910390000075864728
+You can also obtain the MSISDN value using our ConnectivityPro web app using the Subscription details page https://connect-app.korewireless.com/subscriptions/8910390000075864728
 
 ![](cpro-sim-details.png) 
 
