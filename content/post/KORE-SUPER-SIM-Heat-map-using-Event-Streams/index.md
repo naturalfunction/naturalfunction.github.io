@@ -4,7 +4,7 @@ date: 2025-11-26
 description: "A Github repository for a real-time geospatial dashboard using KORE SUPER SIM Event Streams, FastAPI, and Leaflet."
 categories: ["KORE", "KORE ONE", "SUPER SIM", "Event Streams", "Github code", "API"]
 tags: ["KORE", "KORE ONE", "Super SIM", "Event Streams", "Connectivity", "FastAPI", "Leaflet", "Heatmap", "IoT"]
-image: "heatmap.png"
+image: "heatmap-cover.png"
 ---
 
 ![](KORE-LOGO-SUPERSIM.png)
