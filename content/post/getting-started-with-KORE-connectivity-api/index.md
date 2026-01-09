@@ -1,13 +1,13 @@
 ---
-title: "Getting started with KORE ConnectivityPRO™ API"
+title: "Getting Started with KORE ConnectivityPRO™ API"
 date: 2025-11-05
-description: "This article covers the basics to start using the KORE Wireless ConnectivityPRO™ API, I hope this guide helps you onboard the API faster!"
-categories: ["KORE", "ConnectivityPRO™", "API"]
-tags: ["KORE", "ConnectivityPRO™", "API", "Connectivity", "How to", "Getting Started"]
-image: "KORE-LOGO-CONNECTIVITYPRO.jpeg" 
+description: "Complete guide to KORE Wireless ConnectivityPRO™ API. Learn authentication, get account-id, manage SIM subscriptions, and activate devices with step-by-step examples."
+categories: ["KORE", "API", "Getting Started"]
+tags: ["ConnectivityPRO", "Cellular Connectivity", "REST API", "SIM management"]
+image: "KORE-LOGO-CONNECTIVITYPRO.jpeg"
 ---
 
-![](KORE-LOGO-CONNECTIVITYPRO.png) 
+![KORE ConnectivityPRO™ logo](KORE-LOGO-CONNECTIVITYPRO.png) 
 
 ## Introduction
 
@@ -16,6 +16,7 @@ Part of my job includes onboarding customers on our [**Developer Portal**](http:
 
 This article covers some of the frequently asked questions related to our Connectivity API and how to get started.
 
+Once you're comfortable with the Connectivity API, explore the [**SMS API guide**](/p/getting-started-with-kore-connectivitypro-sms-api/) to add messaging capabilities.
 
 ---
 
@@ -55,12 +56,12 @@ This article focuses on the [**Connectivity API**](https://developer-app.korewir
 
 If you are using carriers like [**Verizon**](https://thingspace.verizon.com/documentation/apis/connectivity-management/api-reference.html) or [**AT&T**](https://developer.cisco.com/docs/control-center/cisco-iot-control-center-overview/), your team would need to integrate multiple APIs — each with its own endpoints and structures.  
 
-![](mnos-apis.png) 
+![Diagram showing multiple carrier APIs requiring separate integrations for Verizon and AT&T](mnos-apis.png) 
 
 With **KORE Wireless**, you write code against **one unified API endpoint**.  
 From that point forward, all service types available under your contract become accessible.
 
-![](kore-one-api.png) 
+![Diagram showing KORE ONE unified API connecting to multiple carriers through a single endpoint](kore-one-api.png) 
 
 ---
 ## Introduction
@@ -72,7 +73,7 @@ Once you have access to the Developer Portal:
 1. Follow the [**Getting Started**](https://developer.korewireless.com/getting-started?id=2.1.1.5) guide to create your first client.  
 2. Selecting the client will let you view your **Production** keys.
 
-![](devportal-api-client.png) 
+![KORE Developer Portal showing API client configuration with production keys](devportal-api-client.png) 
 
 ---
 ### Getting an Authentication Token
@@ -89,7 +90,7 @@ When you create a client, you receive:
 
 See below for a high-level overview.
 
-![](KORE-OAuth-Diagram.png) 
+![OAuth 2.0 Client Credentials workflow diagram showing authentication flow between client, API, and token endpoint](KORE-OAuth-Diagram.png) 
 
 Using Postman, set up a POST request to https://api.korewireless.com/Api/api/token for Production. 
 
@@ -99,7 +100,7 @@ The body of your request must include:
 - The key **“client_id”** key with a value from the Developer Portal.
 - The key **“client_secret”** key with a value from the Developer Portal.
 
-![](postman-get-token.jpg) 
+![Postman interface showing POST request to get authentication token with client credentials](postman-get-token.jpg) 
 
 You can also use **cURL** to get an authentication token, use the example below to perform a request.
 
@@ -115,7 +116,7 @@ curl -L -X POST "https://api.korewireless.com/Api/api/token" \
 
 Here’s what the **cURL** returns:
 
-![](curl-response.jpg) 
+![Terminal showing cURL response with authentication token and expiration time](curl-response.jpg) 
 
 The authentication Token is valid for 10 hours, after 10 hours, you will need to call the authentication endpoint again for a new token.
 
@@ -133,7 +134,7 @@ Your GET request must include:
 - A valid Authentication token
 - **x-api-key** as part of your headers
 
-![](postman-get-accountid.jpg) 
+![Postman GET request showing how to retrieve account-id using email parameter](postman-get-accountid.jpg) 
 
 ---
 
@@ -147,7 +148,7 @@ Your GET request must include:
 - A valid Authentication token
 - **x-api-key** as part of your headers
 
-![](postman-get-profileid.png) 
+![Postman GET request displaying activation profile ID retrieval for SIM management](postman-get-profileid.png) 
 
 ---
 
@@ -164,7 +165,7 @@ Your GET request must include:
 - **x-api-key** as part of your headers
 - A query-string parameter, in my example, I will use the **EID** found on my SIM.
 
-![](postman-get-subscription-details.png) 
+![Postman showing subscription details query with EID parameter and response data](postman-get-subscription-details.png) 
 
 ---
 ### Activation
@@ -235,13 +236,13 @@ If you have any questions, don’t hesitate to reach out to me [here](mailto:vri
 
 KORE offers a Postman collection that enables you to validate the APIs without writing any code, alternatively, the Developer Portal documentation also includes the ability to call the endpoints, you must be logged into the Developer Portal to view this [Auth Section](https://developer-app.korewireless.com/api?product=Connectivity#auth).
 
-![](devportal-postman.png) 
+![KORE Developer Portal showing Postman collection download option for API testing](devportal-postman.png) 
 
 ---
 ### Github
 
 KORE Wireless has a [GitHub repository](https://github.com/korewireless) containing code samples. You can view code samples related to the Connectivity API [here](https://github.com/korewireless/Developer-API).
 
-![](kore-github.png) 
+![KORE Wireless GitHub repository page showing Developer API code samples](kore-github.png) 
 
 You can also read this article on Substack [here](https://vitorr.substack.com/p/getting-started-with-kore-wireless)

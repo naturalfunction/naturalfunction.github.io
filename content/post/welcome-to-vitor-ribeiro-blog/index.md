@@ -1,10 +1,10 @@
 ---
 title: "Welcome to Vitor Ribeiro's Blog"
 date: 2025-11-04
-description: ""
-categories: ["Welcome"]
-tags: ["welcome"]
-image: "VR-background.png"  # Add your featured image filename here
+description: "Exploring the intersection of sales, technology, and IoT. Join me as I share insights on KORE Wireless APIs, connectivity solutions, and tech tutorials."
+categories: []
+tags: []
+image: "VR-background.png"
 ---
 
 Welcome to my new [Hugo](https://gohugo.io/)  blog powered by the [Stack](https://stack.jimmycai.com/) theme.

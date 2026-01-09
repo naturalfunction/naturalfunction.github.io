@@ -1,13 +1,13 @@
 ---
-title: "Getting started with KORE ConnectivityPRO™ SMS API"
+title: "Getting Started with KORE ConnectivityPRO™ SMS API"
 date: 2025-11-18
-description: "This article covers the basics to start using the Kore Wireless SMS API, I hope this guide helps you onboard the API faster!"
-categories: ["KORE", "ConnectivityPRO™", "API"]
-tags: ["KORE", "ConnectivityPRO™", "API", "Connectivity", "How to", "Getting Started","SMS"]
-image: "KORE-LOGO-CONNECTIVITYPRO.jpeg" 
+description: "Learn how to send and receive SMS messages using KORE Wireless SMS API. Complete tutorial with authentication, webhooks, and mobile-terminated SMS examples."
+categories: ["KORE", "API", "Getting Started"]
+tags: ["ConnectivityPRO™", "Cellular Connectivity", "SMS", "REST API", "messaging"]
+image: "KORE-LOGO-CONNECTIVITYPRO.jpeg"
 ---
 
-![](KORE-LOGO-CONNECTIVITYPRO.png) 
+![KORE ConnectivityPRO™ logo](KORE-LOGO-CONNECTIVITYPRO.png) 
 
 ## Introduction
 
@@ -49,6 +49,8 @@ It enables KORE Wireless to manage all APIs from a single point — referred to 
 
 This article focuses on the [**SMS API**](https://developer-app.korewireless.com/api?product=SMS#overview), which allows you to send & receive SMS to your SIMs via API.
 
+If you're new to KORE APIs, check out my [**Getting Started with KORE ConnectivityPRO™ API**](/p/getting-started-with-kore-connectivitypro-api/) guide first.
+
 ---
 ## Introduction
 
@@ -59,7 +61,7 @@ Once you have access to the Developer Portal:
 1. Follow the [**Getting Started**](https://developer-app.korewireless.com/getting-started?id=2.1.1.5) guide to create your first [**client**](https://developer-app.korewireless.com/getting-started?id=2.1.1.1).  
 2. Selecting the client will let you view your **Production** keys.
 
-![](devportal-api-client.png) 
+![KORE Developer Portal showing API client configuration with production keys](devportal-api-client.png) 
 
 ---
 ### Getting an Authentication Token
@@ -76,7 +78,7 @@ When you create a client, you receive:
 
 See below for a high-level overview.
 
-![](KORE-OAuth-Diagram.png) 
+![OAuth 2.0 Client Credentials workflow diagram showing authentication flow between client, API, and token endpoint](KORE-OAuth-Diagram.png) 
 
 Using Postman, set up a POST request to https://api.korewireless.com/Api/api/token for Production. 
 
@@ -86,7 +88,7 @@ The body of your request must include:
 - The key **“client_id”** key with a value from the Developer Portal.
 - The key **“client_secret”** key with a value from the Developer Portal.
 
-![](postman-get-token.jpg) 
+![Postman interface showing POST request to get authentication token with client credentials](postman-get-token.jpg) 
 
 You can also use **cURL** to get an authentication token, use the example below to perform a request.
 
@@ -102,7 +104,7 @@ curl -L -X POST "https://api.korewireless.com/Api/api/token" \
 
 Here’s what the **cURL** returns:
 
-![](curl-response.jpg) 
+![Terminal showing cURL response with authentication token and expiration time](curl-response.jpg) 
 
 The authentication Token is valid for 10 hours, after 10 hours, you will need to call the authentication endpoint again for a new token.
 
@@ -205,9 +207,9 @@ After sending the GET request, you should receive a JSON response containing all
 </code>
 </pre>
 
-You can also obtain the MSISDN value using our ConnectivityPro web app using the Subscription details page https://connect-app.korewireless.com/subscriptions/8910390000075864728
+You can also obtain the MSISDN value using our ConnectivityPro™ web app using the Subscription details page https://connect-app.korewireless.com/subscriptions/8910390000075864728
 
-![](cpro-sim-details.png) 
+![ConnectivityPRO web app showing SIM subscription details page with MSISDN information](cpro-sim-details.png) 
 
 
 ## SMS API
@@ -299,7 +301,7 @@ After a successful request is sent, you should get a response like this:
 Here’s a screenshot of the received SMS message on a [**NEXA Rhino C6 handheld**](https://rhinomobility.com/c6/features).
 
 
-![](c6-sms.jpg)
+![NEXA Rhino C6 handheld device displaying received SMS message](c6-sms.jpg)
 
 ### Receiving a Mobile Originated SMS
 
@@ -317,7 +319,7 @@ To configure your SMS-MO Alert, please navigate to Manage Rules,
 
 3. Then click the Add Rule button.
 
-![](manage-rules.png)
+![Developer Portal Manage Rules page showing SMS alerting configuration options](manage-rules.png)
 
 For your Rule:
 
@@ -329,7 +331,7 @@ For your Rule:
 
 4. Select your the **account-id** under Account Id
 
-![](add-rule.png)
+![Add Rule form showing SMS alerting configuration with account ID selection](add-rule.png)
 
 For your Events:
 
@@ -339,7 +341,7 @@ For your Events:
 
 3. Click **Next**
 
-![](events.jpg)
+![Event configuration showing SMS-MO message event type selection](events.jpg)
 
 For your Conditions:
 
@@ -351,7 +353,7 @@ For your Conditions:
 
 4. Click **Next**
 
-![](conditions.jpg)
+![Conditions configuration showing direction attribute set to from_sim for mobile originated SMS](conditions.jpg)
 
 For your Webhook
 
@@ -361,7 +363,7 @@ For your Webhook
 
 In my example I will be using Pipedream
 
-![](actions.jpg)
+![Webhook action configuration with Pipedream URL for receiving SMS alerts](actions.jpg)
 
 For your Alert Strategy the default value of **Immediate** is selected, please click Save.
 
@@ -394,7 +396,7 @@ Now you are ready to receive MO SMS, give it a try and validate you have an entr
 </code>
 </pre>
 
-![](pipedream.png)
+![Pipedream interface showing received mobile originated SMS webhook payload with message data](pipedream.png)
 
 ### Creating a Mobile Terminated SMS monitoring queue
 
@@ -412,7 +414,7 @@ To configure your SMS-MT Alert, please navigate to Manage Rules,
 
 4. Select your the **account-id** under Account Id
 
-![](add-rule-mt.png)
+![Add Rule form for SMS-MT status monitoring with account ID configuration](add-rule-mt.png)
 
 For your Events:
 
@@ -422,7 +424,7 @@ For your Events:
 
 3. Click **Next**
 
-![](events-mt.png)
+![Event configuration showing SMS-MT Status event type for mobile terminated messages](events-mt.png)
 
 For your Conditions:
 
@@ -434,7 +436,7 @@ For your Conditions:
 
 4. Click **Next**
 
-![](conditions-mt.jpg)
+![Conditions configuration showing direction attribute set to to_sim for mobile terminated SMS](conditions-mt.jpg)
 
 For your Webhook
 
@@ -591,13 +593,13 @@ If you have any questions, don’t hesitate to reach out to me [here](mailto:vri
 
 KORE offers a Postman collection that enables you to validate the APIs without writing any code, alternatively, the Developer Portal documentation also includes the ability to call the endpoints, you must be logged into the Developer Portal to view this [Auth Section](https://developer-app.korewireless.com/api?product=Connectivity#auth).
 
-![](devportal-postman.png) 
+![KORE Developer Portal showing Postman collection download option for API testing](devportal-postman.png) 
 
 ---
 ### Github
 
 KORE Wireless has a [GitHub repository](https://github.com/korewireless) containing code samples. You can view code samples related to the Connectivity API [here](https://github.com/korewireless/Developer-API).
 
-![](kore-github.png) 
+![KORE Wireless GitHub repository page showing Developer API code samples](kore-github.png) 
 
 You can also read this article on Substack [here](https://vitorr.substack.com/p/getting-started-with-the-kore-wireless)

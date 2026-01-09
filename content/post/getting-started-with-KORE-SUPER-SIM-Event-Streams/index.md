@@ -1,13 +1,13 @@
 ---
 title: "Getting Started with KORE SUPER SIM Event Streams"
 date: 2025-11-27
-description: "A practical guide on how to set up Destinations, create Streaming Rules, and receive real-time events using KORE SUPER SIM Event Streams."
-categories: ["KORE", "KORE ONE", "SUPER", "API"]
-tags: ["KORE", "KORE ONE", "Event Streams", "Super SIM", "Streaming", "Connectivity", "How to", "Getting Started"]
+description: "Step-by-step guide to configure KORE SUPER SIM Event Streams. Learn to set up destinations, create streaming rules, and receive real-time IoT connectivity events."
+categories: ["KORE", "API", "Event Streams", "Getting Started"]
+tags: ["SUPER SIM", "KORE ONE", "Cellular Connectivity", "Python"]
 image: "KORE-ONE.png"
 ---
 
-![](KORE-Connect-the-dots.jpg)
+![KORE Connect the dots illustration showing IoT connectivity](KORE-Connect-the-dots.jpg)
 
 ## Introduction
 
@@ -18,8 +18,10 @@ This article will show you how to configure **Destinations**, create **Streaming
 
 It’s inspired by the [**official documentation**](https://docs.korewireless.com/en-us/supersim/supersim-first-steps/get-started-with-super-sim-connection-events) but written with a more practical, step-by-step approach. 
 
+Want to see Event Streams in action? Check out my [**SUPER SIM Heatmap tutorial**](/p/kore-super-sim-heat-map-using-event-streams/) that builds a real-time visualization dashboard.
+
 ---
-![](KORE-LOGO-SUPERSIM.png)
+![KORE SUPER SIM logo](KORE-LOGO-SUPERSIM.png)
 
 ## Prerequisites
 
@@ -40,7 +42,7 @@ You don’t need advanced programming knowledge, but you should be familiar with
 - [REST APIs](https://aws.amazon.com/what-is/restful-api/)  
 
 ---
-![](KORE-LOGO-CONSOLE.png)
+![KORE Console logo](KORE-LOGO-CONSOLE.png)
 ## Overview
 
 **Event Streams** allow you to receive real-time events from KORE products delivered to a destination you configure.
@@ -66,7 +68,7 @@ You can choose:
 - A **Webhook** (recommended for simple setups and testing)
 - An **AWS Kinesis Stream** (recommended for production)
 
-![](KORE-Developer-Console-Destination-Options.png)
+![KORE Developer Console showing destination options for Webhook and AWS Kinesis](KORE-Developer-Console-Destination-Options.png)
 
 ---
 
@@ -99,7 +101,7 @@ A Streaming Rule defines **which** event types you want and **where** they shoul
 1. Go to **Event Streams → Streaming Rules**.  
 2. Select **“+ Create”**.  
 
-![](KORE-Developer-Console-Create-Streaming-Rules.png)
+![KORE Developer Console interface for creating streaming rules with event type selection](KORE-Developer-Console-Create-Streaming-Rules.png)
 
 3. Configure:
 
@@ -210,7 +212,7 @@ KORE offers a GitHub repository with code samples:
 
 - https://github.com/korewireless
 
-![](kore-github.png) 4
+![KORE Wireless GitHub repository page showing Developer API code samples](kore-github.png)
 
 More Event Streams examples will be added over time.
 

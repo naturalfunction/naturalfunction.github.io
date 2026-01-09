@@ -1,7 +1,9 @@
 # Change baseurl before deploy
-baseurl = "vitorribeiro.com"
+baseurl = "https://vitorribeiro.com"
 languageCode = "en-us"
 title = "Vitor Ribeiro"
+enableRobotsTXT = true
+canonifyURLs = true
 
 # Theme i18n support
 # Available values: en, fr, id, ja, ko, pt-br, zh-cn, zh-tw, es, de, nl, it, th, el, uk, ar
@@ -16,3 +18,8 @@ disqusShortname = ""
 
 [pagination]
 pagerSize = 5
+
+[sitemap]
+changefreq = "weekly"
+priority = 0.5
+filename = "sitemap.xml"

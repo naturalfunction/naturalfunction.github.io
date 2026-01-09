@@ -1,0 +1,73 @@
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ .Permalink }}" />
+
+<!-- Enhanced Meta Description -->
+{{ if .Description }}
+<meta name="description" content="{{ .Description }}" />
+{{ else if .IsPage }}
+<meta name="description" content="{{ .Summary | plainify | truncate 160 }}" />
+{{ else }}
+<meta name="description" content="{{ .Site.Params.sidebar.subtitle }}" />
+{{ end }}
+
+<!-- Author -->
+<meta name="author" content="{{ .Site.Title }}" />
+
+<!-- Open Graph Enhanced -->
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+{{ with .Description }}
+<meta property="og:description" content="{{ . }}" />
+{{ else }}
+{{ if .IsPage }}
+<meta property="og:description" content="{{ .Summary | plainify | truncate 160 }}" />
+{{ else }}
+<meta property="og:description" content="{{ $.Site.Params.sidebar.subtitle }}" />
+{{ end }}
+{{ end }}
+{{ with .Params.image }}
+<meta property="og:image" content="{{ $.Permalink }}{{ . }}" />
+{{ end }}
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+{{ if .IsPage }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" />
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}" />
+<meta property="article:author" content="{{ .Site.Title }}" />
+{{ with .Params.categories }}
+<meta property="article:section" content="{{ index . 0 }}" />
+{{ end }}
+{{ with .Params.tags }}
+{{ range . }}
+<meta property="article:tag" content="{{ . }}" />
+{{ end }}
+{{ end }}
+{{ end }}
+
+<!-- Twitter Card Enhanced -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ .Title }}" />
+{{ with .Description }}
+<meta name="twitter:description" content="{{ . }}" />
+{{ else }}
+{{ if .IsPage }}
+<meta name="twitter:description" content="{{ .Summary | plainify | truncate 160 }}" />
+{{ else }}
+<meta name="twitter:description" content="{{ $.Site.Params.sidebar.subtitle }}" />
+{{ end }}
+{{ end }}
+{{ with .Params.image }}
+<meta name="twitter:image" content="{{ $.Permalink }}{{ . }}" />
+{{ end }}
+{{ with .Site.Params.opengraph.twitter.site }}
+<meta name="twitter:site" content="@{{ . }}" />
+<meta name="twitter:creator" content="@{{ . }}" />
+{{ end }}
+
+<!-- Additional SEO Meta -->
+{{ if .IsPage }}
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+{{ else }}
+<meta name="robots" content="index, follow" />
+{{ end }}
+<meta name="googlebot" content="index, follow" />

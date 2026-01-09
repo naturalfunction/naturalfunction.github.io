@@ -1,3 +1,9 @@
+<!-- Enhanced SEO Meta Tags -->
+{{ partial "head/seo-meta.html" . }}
+
+<!-- Structured Data for AI Crawlers -->
+{{ partial "head/structured-data.html" . }}
+
 <!-- Custom CSS -->
 {{ $customCSS := resources.Get "scss/custom.scss" | css.Sass | resources.Minify }}
 <link rel="stylesheet" href="{{ $customCSS.RelPermalink }}">

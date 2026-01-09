@@ -1,13 +1,13 @@
 ---
-title: "KORE SUPER SIM Heatmap using Event Streams"
+title: "Build a Real-Time IoT Heatmap with KORE SUPER SIM Event Streams"
 date: 2025-11-26
-description: "A Github repository for a real-time geospatial dashboard using KORE SUPER SIM Event Streams, FastAPI, and Leaflet."
-categories: ["KORE", "KORE ONE", "SUPER SIM", "Event Streams", "Github code", "API"]
-tags: ["KORE", "KORE ONE", "Super SIM", "Event Streams", "Connectivity", "FastAPI", "Leaflet", "Heatmap", "IoT"]
+description: "Build a real-time geospatial dashboard for KORE SUPER SIM using Event Streams, FastAPI, and Leaflet. Complete GitHub code and tutorial for IoT visualization."
+categories: ["KORE", "API", "Event Streams", "GitHub Code"]
+tags: ["SUPER SIM", "KORE ONE", "Cellular Connectivity", "Python"]
 image: "heatmap-cover.png"
 ---
 
-![](KORE-LOGO-SUPERSIM.png)
+![KORE SUPER SIM logo](KORE-LOGO-SUPERSIM.png)
 
 # Visualizing KORE SUPER SIM Event Streams in Real Time
 
@@ -16,6 +16,8 @@ Hi there, my name is **Vitor Ribeiro**, and I am a **Solutions Architect** at **
 In this article, I’ll show you how I built a full real-time geospatial visualization tool for [**KORE SUPER SIM**](https://www.korewireless.com/super-sim/) using the **Event Streams**, [**FastAPI**](https://fastapi.tiangolo.com/), and [**Leaflet**](https://leafletjs.com/) using [**OpenAI Codex**](https://openai.com/codex/)
 
 You can download the code from my [**GitHub repository here**](https://github.com/naturalfunction/KORE-SUPERSIM-heatmap)
+
+New to Event Streams? Start with my [**Getting Started with KORE SUPER SIM Event Streams**](/p/getting-started-with-kore-super-sim-event-streams/) guide first.
 
 ---
 
@@ -133,7 +135,7 @@ uvicorn app.main:app --reload
 
 ---
 
-![](run-project.png)
+![Terminal showing FastAPI server running with uvicorn reload command](run-project.png)
 
 ## 🛠 Seed sample data
 
@@ -156,16 +158,16 @@ done
 ## 🛠 Map Examples
 
 Map after seeding data
-![](heatmap.png)
+![Interactive heatmap showing SUPER SIM device locations with online and offline status indicators](heatmap.png)
 
 Map after filtering data using the Timeline
-![](heatmap-filtering-timeline.png)
+![Heatmap filtered by timeline showing device activity at specific time period](heatmap-filtering-timeline.png)
 
 Map after filtering data using the Timeline Online Only.
-![](heatmap-filtering-timeline-online.png)
+![Heatmap displaying only online devices filtered by timeline with green indicators](heatmap-filtering-timeline-online.png)
 
 Map after filtering data using the Timeline Offline Only.
-![](heatmap-filtering-timeline-offline.png)
+![Heatmap showing only offline devices filtered by timeline with red indicators](heatmap-filtering-timeline-offline.png)
 
 Map after clicking SHOW ALL
-![](heatmap-filtering-timeline-showall-max-zoom.png)
+![Zoomed heatmap view showing all device locations and connection towers at maximum zoom level](heatmap-filtering-timeline-showall-max-zoom.png)
