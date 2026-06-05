@@ -18,7 +18,7 @@ This article will show you how to configure **Destinations**, create **Streaming
 
 It’s inspired by the [**official documentation**](https://docs.korewireless.com/en-us/supersim/supersim-first-steps/get-started-with-super-sim-connection-events) but written with a more practical, step-by-step approach. 
 
-Want to see Event Streams in action? Check out my [**SUPER SIM Heatmap tutorial**](/p/kore-super-sim-heat-map-using-event-streams/) that builds a real-time visualization dashboard.
+Want to see Event Streams in action? Check out my [**SUPER SIM Heatmap tutorial**](/p/build-a-real-time-iot-heatmap-with-kore-super-sim-event-streams//) that builds a real-time visualization dashboard.
 
 ---
 ![KORE SUPER SIM logo](KORE-LOGO-SUPERSIM.png)
