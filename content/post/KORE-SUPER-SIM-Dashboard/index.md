@@ -470,4 +470,4 @@ The KORE SUPER SIM Dashboard is one practical example of how to turn that stream
 
 ---
 
-*Want to explore more KORE Super SIM capabilities? Check out my other articles on [Event Streams](/p/getting-started-with-kore-super-sim-event-streams/) and [real-time visualization](/p/kore-super-sim-heatmap-using-event-streams/).*
+*Want to explore more KORE Super SIM capabilities? Check out my other articles on [Event Streams](/p/getting-started-with-kore-super-sim-event-streams/) and [real-time visualization](/p/build-a-real-time-iot-heatmap-with-kore-super-sim-event-streams/).*
