@@ -14,7 +14,7 @@ Hi there, my name is **Vitor Ribeiro**, and I am a **Solutions Architect** at [*
 This article is a **technical deep-dive** into turning KORE SUPER SIM event streams into a real-time, pre‑sales–ready dashboard. It's a **new, standalone post** that builds on two earlier pieces and consolidates them into one.
 **Previous articles in this series:**
 - **Part 1:** [Getting Started with KORE SUPER SIM Event Streams](/p/getting-started-with-kore-super-sim-event-streams/)
-- **Part 2:** [KORE SUPER SIM Heatmap Using Event Streams](/p/kore-super-sim-heatmap-using-event-streams/)
+- **Part 2:** [KORE SUPER SIM Heatmap Using Event Streams](/p/build-a-real-time-iot-heatmap-with-kore-super-sim-event-streams/)
 
 Those posts introduced the concepts and an initial visualization experiment. This one goes further: it focuses on **architecture, implementation details, and design decisions**, using the **KORE Super SIM Dashboard** as a concrete reference.
 
